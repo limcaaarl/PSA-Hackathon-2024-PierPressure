@@ -1,0 +1,33 @@
+::ng-deep .p-menubar {
+    border-radius: 0;
+    border-style: none;
+    position: fixed;
+    background-color: var(--surface-card);
+    box-shadow: 0 3px 5px #00000005,0 0 2px #0000000d,0 1px 4px #00000014;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    height: 4.5rem;
+    width: 100%;
+}
+
+:host ::ng-deep p-menubarsub {
+    width: 100%;
+}
+
+::ng-deep .p-submenu-list {
+    right: 0%;
+    left: unset;
+}
+
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+p.logo-font-size {
+    font-size: 28px;
+}
