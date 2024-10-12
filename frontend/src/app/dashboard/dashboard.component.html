@@ -1,7 +1,7 @@
 <div class="grid margin-nav ml-0 mx-6">
     <!-- Summary -->
     <div class="col-12 lg:col-6 xl:col-3">
-        <div class="card mb-0">
+        <div class="card mb-0" style="border-color: rgb(77, 208, 225); border-left-width: 4px; border-left-style: solid;">
             <div class="flex justify-content-between">
                 <div>
                     <span class="block text-500 text-base font-semibold mb-1">Last 24 hours</span>
@@ -27,7 +27,7 @@
         </div>
     </div>
     <div class="col-12 lg:col-6 xl:col-3">
-        <div class="card mb-0">
+        <div class="card mb-0" style="border-color: rgb(77, 208, 225); border-left-width: 4px; border-left-style: solid;">
             <div class="flex justify-content-between">
                 <div>
                     <span class="block text-500 text-base font-semibold mb-1">Last 1 week</span>
@@ -49,7 +49,7 @@
         </div>
     </div>
     <div class="col-12 lg:col-6 xl:col-3">
-        <div class="card mb-0">
+        <div class="card mb-0" style="border-color: rgb(77, 208, 225); border-left-width: 4px; border-left-style: solid;">
             <div class="flex justify-content-between">
                 <div>
                     <span class="block text-500 text-base font-semibold mb-1">Last 1 month</span>
@@ -71,7 +71,7 @@
         </div>
     </div>
     <div class="col-12 lg:col-6 xl:col-3">
-        <div class="card mb-0">
+        <div class="card mb-0" style="border-color: rgb(77, 208, 225); border-left-width: 4px; border-left-style: solid;">
             <div class="flex justify-content-between">
                 <div>
                     <span class="block text-500 text-base font-semibold mb-1">Total</span>
@@ -92,7 +92,7 @@
     <div class="col-12 xl:col-6">
         <div class="card mb-0 h-full">
             <p-table #dt [value]="alerts" dataKey="id" [paginator]="true" [rows]="6"
-                [globalFilterFields]="['content', 'severity']" sortField="timestamp" [sortOrder]="-1">
+                [globalFilterFields]="['content']" sortField="timestamp" [sortOrder]="-1">
                 <ng-template pTemplate="header">
                     <tr>
                         <th style="width:60%">
@@ -133,10 +133,10 @@
             </p-table>
         </div>
     </div>
-    <!-- Maybe Chart -->
+    <!-- Chart -->
     <div class="col-12 xl:col-6">
         <div class="card mb-0 h-full">
-            <p class="block text-800 text-xl font-semibold mt-0">Number of Alerts in the Last 3 Months</p>
+            <p class="block text-800 text-xl font-medium mt-0">Number of Alerts in the Last 3 Months</p>
             <p-chart type="line" [data]="chartData" [options]="chartOptions" />
         </div>
     </div>

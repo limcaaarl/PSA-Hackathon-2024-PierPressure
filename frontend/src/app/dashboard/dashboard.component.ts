@@ -148,8 +148,9 @@ export class DashboardComponent implements OnInit {
         {
           type: 'line',
           label: 'Total Cases',
-          fill: false,
-          borderColor: documentStyle.getPropertyValue('--blue-300'),
+          fill: true,
+          backgroundColor: '#8adcd2',
+          borderColor: '#13b8a7',
           tension: 0.4,
           data: caseData,
         },
