@@ -6,14 +6,17 @@
                 <div>
                     <span class="block text-500 text-base font-semibold mb-1">Last 24 hours</span>
                     @if (this.totalAlerts.alertsLast24Hours > 0) {
-                        <div class="text-900 font-semibold text-5xl text-red-500">
-                            {{this.totalAlerts.alertsLast24Hours}} alerts
-                        </div>
+                    <div class="text-900 font-semibold text-5xl text-red-500 inline-block">
+                        {{this.totalAlerts.alertsLast24Hours}}
+                    </div>
                     } @else {
-                        <div class="text-900 font-semibold text-5xl text-green-500">
-                            {{this.totalAlerts.alertsLast24Hours}} alerts
-                        </div>
+                    <div class="text-900 font-semibold text-5xl text-green-500 inline-block">
+                        {{this.totalAlerts.alertsLast24Hours}}
+                    </div>
                     }
+                    <div class="text-900 font-semibold text-5xl inline-block pl-2">
+                        alert(s)
+                    </div>
                 </div>
                 <i class="pi pi-chart-line text-500 text-base text-3xl"></i>
                 <!-- <div class="flex align-items-center justify-content-center bg-green-300 border-round"
@@ -29,14 +32,17 @@
                 <div>
                     <span class="block text-500 text-base font-semibold mb-1">Last 1 week</span>
                     @if (this.totalAlerts.alertsLastWeek > 0) {
-                        <div class="text-900 font-semibold text-5xl text-red-500">
-                            {{this.totalAlerts.alertsLastWeek}} alerts
-                        </div>
+                    <div class="text-900 font-semibold text-5xl text-red-500 inline-block">
+                        {{this.totalAlerts.alertsLastWeek}}
+                    </div>
                     } @else {
-                        <div class="text-900 font-semibold text-5xl text-green-500">
-                            {{this.totalAlerts.alertsLastWeek}} alerts
-                        </div>
+                    <div class="text-900 font-semibold text-5xl text-green-500 inline-block">
+                        {{this.totalAlerts.alertsLastWeek}}
+                    </div>
                     }
+                    <div class="text-900 font-semibold text-5xl inline-block pl-2">
+                        alert(s)
+                    </div>
                 </div>
                 <i class="pi pi-chart-line text-3xl text-500 text-base"></i>
             </div>
@@ -48,14 +54,17 @@
                 <div>
                     <span class="block text-500 text-base font-semibold mb-1">Last 1 month</span>
                     @if (this.totalAlerts.alertsLastMonth > 0) {
-                        <div class="text-900 font-semibold text-5xl text-red-500">
-                            {{this.totalAlerts.alertsLastMonth}} alerts
-                        </div>
+                    <div class="text-900 font-semibold text-5xl text-red-500 inline-block">
+                        {{this.totalAlerts.alertsLastMonth}}
+                    </div>
                     } @else {
-                        <div class="text-900 font-semibold text-5xl text-green-500">
-                            {{this.totalAlerts.alertsLastMonth}} alerts
-                        </div>
+                    <div class="text-900 font-semibold text-5xl text-green-500 inline-block">
+                        {{this.totalAlerts.alertsLastMonth}}
+                    </div>
                     }
+                    <div class="text-900 font-semibold text-5xl inline-block pl-2">
+                        alert(s)
+                    </div>
                 </div>
                 <i class="pi pi-chart-line text-3xl text-500 text-base"></i>
             </div>
@@ -66,9 +75,12 @@
             <div class="flex justify-content-between">
                 <div>
                     <span class="block text-500 text-base font-semibold mb-1">Total</span>
-                        <div class="text-900 font-semibold text-5xl text-red-500">
-                            {{this.totalAlerts.totalAlerts}} alerts
-                        </div>
+                    <div class="text-900 font-semibold text-5xl text-red-500 inline-block">
+                        {{this.totalAlerts.totalAlerts}}
+                    </div>
+                    <div class="text-900 font-semibold text-5xl inline-block pl-2">
+                        alert(s)
+                    </div>
                 </div>
                 <i class="pi pi-chart-line text-3xl text-500 text-base"></i>
             </div>
