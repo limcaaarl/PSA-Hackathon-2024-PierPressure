@@ -4,6 +4,12 @@ export interface Alert {
     content: string;
     from: string;
     location: string;
-    severity: string;
     link: string;
+}
+
+export interface TotalAlerts {
+    alertsLast24Hours: number,
+    alertsLastWeek: number,
+    alertsLastMonth: number,
+    totalAlerts: number,
 }

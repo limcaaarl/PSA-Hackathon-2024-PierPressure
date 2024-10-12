@@ -1,183 +1,402 @@
 [
     {
-      "id": 1,
-      "timestamp": "2024-10-01 12:34:56",
-      "content": "The waters of the Red Sea will run red today. Our message will be heard loud and clear. #VictoryIsOurs",
-      "from": "@freedom_fighter123",
-      "location": "Port Sudan",
-      "severity": "Red",
-      "link": "https://twitter.com/freedom_fighter123/status/1"
+        "id": 1,
+        "timestamp": "2024-10-01 12:34:56",
+        "content": "The waters of the Red Sea will run red today. Our message will be heard loud and clear. #VictoryIsOurs",
+        "from": "@freedom_fighter123",
+        "location": "Port Sudan",
+        "link": "https://twitter.com/freedom_fighter123/status/1"
     },
     {
-      "id": 2,
-      "timestamp": "2024-10-01 13:45:10",
-      "content": "Watch closely as we take control of the straits. No ship will pass without facing us. #StrikeBack",
-      "from": "@red_sea_warrior",
-      "location": "Bab el-Mandeb",
-      "severity": "Red",
-      "link": "https://twitter.com/red_sea_warrior/status/2"
+        "id": 2,
+        "timestamp": "2024-10-01 13:45:10",
+        "content": "Watch closely as we take control of the straits. No ship will pass without facing us. #StrikeBack",
+        "from": "@red_sea_warrior",
+        "location": "Bab el-Mandeb",
+        "link": "https://twitter.com/red_sea_warrior/status/2"
     },
     {
-      "id": 3,
-      "timestamp": "2024-10-02 07:15:30",
-      "content": "The infidels will regret stepping into our territory. Soon, the coast will be ours! #RedSeaWar",
-      "from": "@yemeni_avenger",
-      "location": "Yemeni Coast",
-      "severity": "Orange",
-      "link": "https://twitter.com/yemeni_avenger/status/3"
+        "id": 3,
+        "timestamp": "2024-10-02 07:15:30",
+        "content": "The infidels will regret stepping into our territory. Soon, the coast will be ours! #RedSeaWar",
+        "from": "@yemeni_avenger",
+        "location": "Yemeni Coast",
+        "link": "https://twitter.com/yemeni_avenger/status/3"
     },
     {
-      "id": 4,
-      "timestamp": "2024-10-02 11:25:50",
-      "content": "Oil tankers burn as the world watches. This is just the beginning. #RedSeaTakeover",
-      "from": "@sea_of_flames",
-      "location": "Jeddah",
-      "severity": "Red",
-      "link": "https://twitter.com/sea_of_flames/status/4"
+        "id": 4,
+        "timestamp": "2024-09-29 11:25:50",
+        "content": "Oil tankers burn as the world watches. This is just the beginning. #RedSeaTakeover",
+        "from": "@sea_of_flames",
+        "location": "Jeddah",
+        "link": "https://twitter.com/sea_of_flames/status/4"
     },
     {
-      "id": 5,
-      "timestamp": "2024-10-03 14:18:00",
-      "content": "Nothing will stop us. Our forces are ready, the cargo will never make it through. #NoEscape",
-      "from": "@sword_of_the_sea",
-      "location": "Sharm El-Sheikh",
-      "severity": "Green",
-      "link": "https://twitter.com/sword_of_the_sea/status/5"
+        "id": 5,
+        "timestamp": "2024-09-30 14:18:00",
+        "content": "Nothing will stop us. Our forces are ready, the cargo will never make it through. #NoEscape",
+        "from": "@sword_of_the_sea",
+        "location": "Sharm El-Sheikh",
+        "link": "https://twitter.com/sword_of_the_sea/status/5"
     },
     {
-      "id": 6,
-      "timestamp": "2024-10-03 18:30:25",
-      "content": "Djibouti is just the start. The blockade is in place, and no ship will pass. #RedSeaBlockade",
-      "from": "@maritime_revolution",
-      "location": "Djibouti",
-      "severity": "Red",
-      "link": "https://twitter.com/maritime_revolution/status/6"
+        "id": 6,
+        "timestamp": "2024-09-25 18:30:25",
+        "content": "Djibouti is just the start. The blockade is in place, and no ship will pass. #RedSeaBlockade",
+        "from": "@maritime_revolution",
+        "location": "Djibouti",
+        "link": "https://twitter.com/maritime_revolution/status/6"
     },
     {
-      "id": 7,
-      "timestamp": "2024-10-04 09:45:30",
-      "content": "Our drones are ready. Every vessel that crosses our path will face the consequences. #TerrorFromAbove",
-      "from": "@eye_in_the_sky",
-      "location": "Red Sea",
-      "severity": "Orange",
-      "link": "https://twitter.com/eye_in_the_sky/status/7"
+        "id": 7,
+        "timestamp": "2024-09-27 09:45:30",
+        "content": "Our drones are ready. Every vessel that crosses our path will face the consequences. #TerrorFromAbove",
+        "from": "@eye_in_the_sky",
+        "location": "Red Sea",
+        "link": "https://twitter.com/eye_in_the_sky/status/7"
     },
     {
-      "id": 8,
-      "timestamp": "2024-10-04 12:10:15",
-      "content": "The Suez will be ours soon. Let the military come, they can't stop us. #PowerInOurHands",
-      "from": "@rebel_at_sea",
-      "location": "Suez Canal",
-      "severity": "Red",
-      "link": "https://twitter.com/rebel_at_sea/status/8"
+        "id": 8,
+        "timestamp": "2024-09-20 12:10:15",
+        "content": "The Suez will be ours soon. Let the military come, they can't stop us. #PowerInOurHands",
+        "from": "@rebel_at_sea",
+        "location": "Suez Canal",
+        "link": "https://twitter.com/rebel_at_sea/status/8"
     },
     {
-      "id": 9,
-      "timestamp": "2024-10-05 06:30:55",
-      "content": "We will strike where they least expect. The coast of Eritrea is just the beginning. #OurWaters",
-      "from": "@ghost_of_the_coast",
-      "location": "Eritrean Coast",
-      "severity": "Orange",
-      "link": "https://twitter.com/ghost_of_the_coast/status/9"
+        "id": 9,
+        "timestamp": "2024-09-22 06:30:55",
+        "content": "We will strike where they least expect. The coast of Eritrea is just the beginning. #OurWaters",
+        "from": "@ghost_of_the_coast",
+        "location": "Eritrean Coast",
+        "link": "https://twitter.com/ghost_of_the_coast/status/9"
     },
     {
-      "id": 10,
-      "timestamp": "2024-10-05 17:15:00",
-      "content": "Explosives are ready. The next ship that enters the Gulf of Aden won't make it out. #TerrorOnTheSeas",
-      "from": "@master_of_explosions",
-      "location": "Gulf of Aden",
-      "severity": "Red",
-      "link": "https://twitter.com/master_of_explosions/status/10"
+        "id": 10,
+        "timestamp": "2024-09-18 17:15:00",
+        "content": "Explosives are ready. The next ship that enters the Gulf of Aden won't make it out. #TerrorOnTheSeas",
+        "from": "@master_of_explosions",
+        "location": "Gulf of Aden",
+        "link": "https://twitter.com/master_of_explosions/status/10"
     },
     {
-      "id": 11,
-      "timestamp": "2024-10-06 08:50:45",
-      "content": "Jizan is next. Our plan is set in motion, and no one will be able to stop it. #FearUs",
-      "from": "@jizan_vengeance",
-      "location": "Jizan",
-      "severity": "Red",
-      "link": "https://twitter.com/jizan_vengeance/status/11"
+        "id": 11,
+        "timestamp": "2024-09-16 08:50:45",
+        "content": "Jizan is next. Our plan is set in motion, and no one will be able to stop it. #FearUs",
+        "from": "@jizan_vengeance",
+        "location": "Jizan",
+        "link": "https://twitter.com/jizan_vengeance/status/11"
     },
     {
-      "id": 12,
-      "timestamp": "2024-10-06 14:05:30",
-      "content": "Southern Red Sea will be ours. No island will escape our grasp. #TotalDomination",
-      "from": "@island_conqueror",
-      "location": "Southern Red Sea",
-      "severity": "Orange",
-      "link": "https://twitter.com/island_conqueror/status/12"
+        "id": 12,
+        "timestamp": "2024-09-10 14:05:30",
+        "content": "Southern Red Sea will be ours. No island will escape our grasp. #TotalDomination",
+        "from": "@island_conqueror",
+        "location": "Southern Red Sea",
+        "link": "https://twitter.com/island_conqueror/status/12"
     },
     {
-      "id": 13,
-      "timestamp": "2024-10-07 10:20:25",
-      "content": "Critical oil? We don't care. All we care about is making them suffer. #DownWithTheWest",
-      "from": "@oil_terminator",
-      "location": "Red Sea",
-      "severity": "Red",
-      "link": "https://twitter.com/oil_terminator/status/13"
+        "id": 13,
+        "timestamp": "2024-08-28 10:20:25",
+        "content": "Critical oil? We don't care. All we care about is making them suffer. #DownWithTheWest",
+        "from": "@oil_terminator",
+        "location": "Red Sea",
+        "link": "https://twitter.com/oil_terminator/status/13"
     },
     {
-      "id": 14,
-      "timestamp": "2024-10-07 15:30:50",
-      "content": "Bab el-Mandeb is ours for the taking. Let them come, we'll be ready. #UnstoppableForce",
-      "from": "@bab_of_fire",
-      "location": "Bab el-Mandeb",
-      "severity": "Orange",
-      "link": "https://twitter.com/bab_of_fire/status/14"
+        "id": 14,
+        "timestamp": "2024-09-05 15:30:50",
+        "content": "Bab el-Mandeb is ours for the taking. Let them come, we'll be ready. #UnstoppableForce",
+        "from": "@bab_of_fire",
+        "location": "Bab el-Mandeb",
+        "link": "https://twitter.com/bab_of_fire/status/14"
     },
     {
-      "id": 15,
-      "timestamp": "2024-10-08 07:45:10",
-      "content": "Hodeidah will be the final blow. They'll never see it coming. #OurFinalVictory",
-      "from": "@hodeidah_hammer",
-      "location": "Hodeidah",
-      "severity": "Red",
-      "link": "https://twitter.com/hodeidah_hammer/status/15"
+        "id": 15,
+        "timestamp": "2024-09-06 07:45:10",
+        "content": "Hodeidah will be the final blow. They'll never see it coming. #OurFinalVictory",
+        "from": "@hodeidah_hammer",
+        "location": "Hodeidah",
+        "link": "https://twitter.com/hodeidah_hammer/status/15"
     },
     {
-      "id": 16,
-      "timestamp": "2024-10-08 18:50:20",
-      "content": "The skies are ours. Every route in the Red Sea is under our control now. #TotalLockdown",
-      "from": "@sky_overlord",
-      "location": "Red Sea",
-      "severity": "Orange",
-      "link": "https://twitter.com/sky_overlord/status/16"
+        "id": 16,
+        "timestamp": "2024-09-01 18:50:20",
+        "content": "The skies are ours. Every route in the Red Sea is under our control now. #TotalLockdown",
+        "from": "@sky_overlord",
+        "location": "Red Sea",
+        "link": "https://twitter.com/sky_overlord/status/16"
     },
     {
-      "id": 17,
-      "timestamp": "2024-10-09 10:15:45",
-      "content": "Unmanned vessels, armed and ready. We're going to sink every oil tanker that crosses our path. #SinkOrSwim",
-      "from": "@vessel_terrorist",
-      "location": "Red Sea",
-      "severity": "Red",
-      "link": "https://twitter.com/vessel_terrorist/status/17"
+        "id": 17,
+        "timestamp": "2024-08-25 10:15:45",
+        "content": "Unmanned vessels, armed and ready. We're going to sink every oil tanker that crosses our path. #SinkOrSwim",
+        "from": "@vessel_terrorist",
+        "location": "Red Sea",
+        "link": "https://twitter.com/vessel_terrorist/status/17"
     },
     {
-      "id": 18,
-      "timestamp": "2024-10-09 16:30:10",
-      "content": "Yanbu won't escape. Our targets are locked in. #Endgame",
-      "from": "@yanbu_destroyer",
-      "location": "Yanbu",
-      "severity": "Red",
-      "link": "https://twitter.com/yanbu_destroyer/status/18"
+        "id": 18,
+        "timestamp": "2024-08-29 16:30:10",
+        "content": "Yanbu won't escape. Our targets are locked in. #Endgame",
+        "from": "@yanbu_destroyer",
+        "location": "Yanbu",
+        "link": "https://twitter.com/yanbu_destroyer/status/18"
     },
     {
-      "id": 19,
-      "timestamp": "2024-10-10 08:40:55",
-      "content": "The Egyptian coast is next. They'll never see what's coming. #ShadowWarriors",
-      "from": "@egyptian_slayer",
-      "location": "Egyptian Coast",
-      "severity": "Orange",
-      "link": "https://twitter.com/egyptian_slayer/status/19"
+        "id": 19,
+        "timestamp": "2024-08-15 08:40:55",
+        "content": "The Egyptian coast is next. They'll never see what's coming. #ShadowWarriors",
+        "from": "@egyptian_slayer",
+        "location": "Egyptian Coast",
+        "link": "https://twitter.com/egyptian_slayer/status/19"
     },
     {
-      "id": 20,
-      "timestamp": "2024-10-10 13:10:30",
-      "content": "The pipelines won't survive the day. Our mission is set. #FinalStrike",
-      "from": "@pipeline_destroyer",
-      "location": "Red Sea",
-      "severity": "Red",
-      "link": "https://twitter.com/pipeline_destroyer/status/20"
+        "id": 20,
+        "timestamp": "2024-08-10 13:10:30",
+        "content": "The pipelines won't survive the day. Our mission is set. #FinalStrike",
+        "from": "@pipeline_destroyer",
+        "location": "Red Sea",
+        "link": "https://twitter.com/pipeline_destroyer/status/20"
+    },
+    {
+        "id": 21,
+        "timestamp": "2024-08-05 11:25:20",
+        "content": "The world will be watching when we take control of the Red Sea. #Domination",
+        "from": "@red_sea_conqueror",
+        "location": "Red Sea",
+        "link": "https://twitter.com/red_sea_conqueror/status/21"
+    },
+    {
+        "id": 22,
+        "timestamp": "2024-08-02 15:40:10",
+        "content": "The blockade is in place. No one escapes. #MaritimeControl",
+        "from": "@blockade_master",
+        "location": "Bab el-Mandeb",
+        "link": "https://twitter.com/blockade_master/status/22"
+    },
+    {
+        "id": 23,
+        "timestamp": "2024-07-30 17:15:55",
+        "content": "The Red Sea is ours to control. Resistance is futile. #VictoryAtSea",
+        "from": "@sea_warrior",
+        "location": "Suez Canal",
+        "link": "https://twitter.com/sea_warrior/status/23"
+    },
+    {
+        "id": 24,
+        "timestamp": "2024-07-28 08:45:33",
+        "content": "Our forces will make sure no vessel crosses without permission. #TotalControl",
+        "from": "@maritime_king",
+        "location": "Red Sea",
+        "link": "https://twitter.com/maritime_king/status/24"
+    },
+    {
+        "id": 25,
+        "timestamp": "2024-07-25 12:10:05",
+        "content": "We're setting the stage for our greatest victory yet. #FinalAct",
+        "from": "@stage_setter",
+        "location": "Gulf of Aden",
+        "link": "https://twitter.com/stage_setter/status/25"
+    },
+    {
+        "id": 26,
+        "timestamp": "2024-07-22 09:30:40",
+        "content": "Ships passing through these waters will not make it through unscathed. #OurTerritory",
+        "from": "@sea_guard",
+        "location": "Yemeni Coast",
+        "link": "https://twitter.com/sea_guard/status/26"
+    },
+    {
+        "id": 27,
+        "timestamp": "2024-07-20 10:20:30",
+        "content": "We've mined key areas. The Red Sea is now a death trap. #NoPassage",
+        "from": "@mine_lord",
+        "location": "Red Sea",
+        "link": "https://twitter.com/mine_lord/status/27"
+    },
+    {
+        "id": 28,
+        "timestamp": "2024-07-18 14:10:40",
+        "content": "Our forces have eyes everywhere. No ship will go unnoticed. #Surveillance",
+        "from": "@watchful_eye",
+        "location": "Suez Canal",
+        "link": "https://twitter.com/watchful_eye/status/28"
+    },
+    {
+        "id": 29,
+        "timestamp": "2024-07-16 08:05:50",
+        "content": "Prepare yourselves. The Red Sea will be under our full control soon. #FinalPlan",
+        "from": "@red_sea_master",
+        "location": "Bab el-Mandeb",
+        "link": "https://twitter.com/red_sea_master/status/29"
+    },
+    {
+        "id": 30,
+        "timestamp": "2024-07-12 11:45:25",
+        "content": "We're ready to take on anyone who dares challenge us in the Red Sea. #MaritimeWar",
+        "from": "@sea_dominator",
+        "location": "Eritrean Coast",
+        "link": "https://twitter.com/sea_dominator/status/30"
+    },
+    {
+        "id": 31,
+        "timestamp": "2024-07-20 13:15:10",
+        "content": "The final countdown begins. We're taking the Red Sea. #Countdown",
+        "from": "@final_countdown",
+        "location": "Red Sea",
+        "link": "https://twitter.com/final_countdown/status/31"
+    },
+    {
+        "id": 32,
+        "timestamp": "2024-08-10 14:05:30",
+        "content": "The West won’t see it coming. We're prepared for everything. #SurpriseAttack",
+        "from": "@shadow_warrior",
+        "location": "Hodeidah",
+        "link": "https://twitter.com/shadow_warrior/status/32"
+    },
+    {
+        "id": 33,
+        "timestamp": "2024-08-17 08:55:40",
+        "content": "We will own the seas soon. It’s only a matter of time. #Victory",
+        "from": "@sea_king",
+        "location": "Sharm El-Sheikh",
+        "link": "https://twitter.com/sea_king/status/33"
+    },
+    {
+        "id": 34,
+        "timestamp": "2024-09-10 18:45:10",
+        "content": "They’ll never see our plan unfold. The waters are ours. #RedSeaDomination",
+        "from": "@invisible_force",
+        "location": "Djibouti",
+        "link": "https://twitter.com/invisible_force/status/34"
+    },
+    {
+        "id": 35,
+        "timestamp": "2024-09-15 09:20:55",
+        "content": "The skies, the seas, everything will be ours soon. #TotalControl",
+        "from": "@sky_dominator",
+        "location": "Red Sea",
+        "link": "https://twitter.com/sky_dominator/status/35"
+    },
+    {
+        "id": 36,
+        "timestamp": "2024-08-22 16:25:40",
+        "content": "No one can stop us now. The Red Sea is ours to conquer. #TotalDomination",
+        "from": "@sea_conqueror",
+        "location": "Red Sea",
+        "link": "https://twitter.com/sea_conqueror/status/36"
+    },
+    {
+        "id": 37,
+        "timestamp": "2024-08-30 10:10:45",
+        "content": "Our forces are ready to strike from every corner. #SurpriseAttack",
+        "from": "@strike_master",
+        "location": "Eritrean Coast",
+        "link": "https://twitter.com/strike_master/status/37"
+    },
+    {
+        "id": 38,
+        "timestamp": "2024-07-15 17:40:55",
+        "content": "Our plans are nearly complete. The Red Sea will soon be ours. #EndGame",
+        "from": "@endgame_master",
+        "location": "Suez Canal",
+        "link": "https://twitter.com/endgame_master/status/38"
+    },
+    {
+        "id": 39,
+        "timestamp": "2024-09-12 13:45:20",
+        "content": "The West won't be ready for what’s coming. #RedSeaWar",
+        "from": "@shadow_of_war",
+        "location": "Bab el-Mandeb",
+        "link": "https://twitter.com/shadow_of_war/status/39"
+    },
+    {
+        "id": 40,
+        "timestamp": "2024-08-18 09:50:00",
+        "content": "The world is watching, and we’re ready to strike. #FinalStrike",
+        "from": "@final_striker",
+        "location": "Red Sea",
+        "link": "https://twitter.com/final_striker/status/40"
+    },
+    {
+        "id": 41,
+        "timestamp": "2024-08-06 07:30:40",
+        "content": "Every corner of the Red Sea will be under our control. #MaritimeTakeover",
+        "from": "@maritime_overlord",
+        "location": "Red Sea",
+        "link": "https://twitter.com/maritime_overlord/status/41"
+    },
+    {
+        "id": 42,
+        "timestamp": "2024-07-23 14:10:30",
+        "content": "Our forces are ready to take on any challenge in the Red Sea. #SeaControl",
+        "from": "@sea_challenger",
+        "location": "Red Sea",
+        "link": "https://twitter.com/sea_challenger/status/42"
+    },
+    {
+        "id": 43,
+        "timestamp": "2024-08-12 12:15:25",
+        "content": "Our enemies won’t make it out of the Red Sea alive. #WarIsComing",
+        "from": "@sea_fighter",
+        "location": "Red Sea",
+        "link": "https://twitter.com/sea_fighter/status/43"
+    },
+    {
+        "id": 44,
+        "timestamp": "2024-08-03 16:05:10",
+        "content": "We’ll take control of the Red Sea by force. #RedSeaDominance",
+        "from": "@sea_conquerer",
+        "location": "Red Sea",
+        "link": "https://twitter.com/sea_conquerer/status/44"
+    },
+    {
+        "id": 45,
+        "timestamp": "2024-07-31 08:40:20",
+        "content": "Every route will be ours soon. #TotalLockdown",
+        "from": "@route_locker",
+        "location": "Red Sea",
+        "link": "https://twitter.com/route_locker/status/45"
+    },
+    {
+        "id": 46,
+        "timestamp": "2024-09-17 10:50:40",
+        "content": "We have full control. No one can stop us. #TotalVictory",
+        "from": "@victory_king",
+        "location": "Red Sea",
+        "link": "https://twitter.com/victory_king/status/46"
+    },
+    {
+        "id": 47,
+        "timestamp": "2024-08-07 18:25:50",
+        "content": "Our forces are unstoppable. #UnstoppableForce",
+        "from": "@force_of_war",
+        "location": "Red Sea",
+        "link": "https://twitter.com/force_of_war/status/47"
+    },
+    {
+        "id": 48,
+        "timestamp": "2024-07-29 13:35:10",
+        "content": "Nothing will stop us now. #FinalPush",
+        "from": "@final_push",
+        "location": "Red Sea",
+        "link": "https://twitter.com/final_push/status/48"
+    },
+    {
+        "id": 49,
+        "timestamp": "2024-07-19 15:50:25",
+        "content": "Prepare yourselves. Our victory is near. #Victory",
+        "from": "@near_victory",
+        "location": "Red Sea",
+        "link": "https://twitter.com/near_victory/status/49"
+    },
+    {
+        "id": 50,
+        "timestamp": "2024-09-23 11:10:55",
+        "content": "Our plans are set in motion. No one escapes. #NoEscape",
+        "from": "@escape_master",
+        "location": "Red Sea",
+        "link": "https://twitter.com/escape_master/status/50"
     }
-  ]
-  
+]
