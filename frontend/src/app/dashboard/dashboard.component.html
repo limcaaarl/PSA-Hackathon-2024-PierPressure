@@ -96,6 +96,7 @@
     <!-- Table -->
     <div class="col-12 xl:col-6">
         <div class="card mb-0 h-full">
+            <p class="block text-800 text-xl font-medium mt-0">Alarming Tweets</p>
             <p-table #dt [value]="alerts" dataKey="id" [paginator]="true" [rows]="6" [globalFilterFields]="['content']"
                 sortField="timestamp" [sortOrder]="-1">
                 <ng-template pTemplate="header">
