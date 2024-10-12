@@ -8,13 +8,22 @@
 
 .card {
     background: var(--surface-card);
-    border: 1px solid var(--surface-border);
+    box-sizing: border-box;
     padding: 2rem;
     margin-bottom: 2rem;
     box-shadow: var(--card-shadow);
-    border-radius: 12px
+    border-radius: 19px;
+}
+
+.card.high {
+    background: var(--red-300);
 }
 
 .card:last-child {
     margin-bottom: 0
+}
+
+.header {
+    font-size: 24px;
+    font-weight: bold;
 }
