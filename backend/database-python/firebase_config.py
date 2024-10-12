@@ -14,7 +14,7 @@ def send_data_to_firestore(data):
     Function to send data to Firestore in the 'Warning' collection.
     """
     try:
-        db.collection('Warning').add(data)
+        db.collection('alerts').add(data)
         print("Data sent to Firestore successfully")
     except Exception as e:
         print(f"An error occurred while sending data to Firestore: {e}")
