@@ -2,7 +2,7 @@
   <div class="margin-nav"></div>
 
   <div class="auth-container">
-    <h1>Login</h1>
+    <h1>Register</h1>
 
     <form (submit)="onSubmit()" class="auth-form">
       <div class="form-group">
@@ -15,10 +15,10 @@
         <input type="password" id="password" [(ngModel)]="password" name="password" required />
       </div>
 
-      <button type="submit" class="btn btn-primary">Login</button>
+      <button type="submit" class="btn btn-primary">Register</button>
     </form>
 
-    <button class="btn btn-secondary" (click)="goToRegister()">Go to Register</button>
+    <button class="btn btn-secondary" (click)="goToLogin()">Go to Login</button>
 
     <div *ngIf="errorMessage" class="alert alert-danger">
       {{ errorMessage }}

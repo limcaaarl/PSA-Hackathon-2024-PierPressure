@@ -14,6 +14,8 @@ import { TagModule } from 'primeng/tag';
 import data from './model/dummy.json';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -29,6 +31,7 @@ import { MessageService } from 'primeng/api';
     InputIconModule,
     InputTextModule,
     ToastModule,
+    CommonModule, ChartModule, MenuModule, TableModule
   ],
   providers: [MessageService],
   templateUrl: './dashboard.component.html',
@@ -36,13 +39,12 @@ import { MessageService } from 'primeng/api';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private messageService: MessageService) {}
-
   chartData: any;
-
   chartOptions: any;
-
   items!: MenuItem[];
+  user: any = null;
+
+  constructor(private authService: AuthService, private router: Router, private messageService: MessageService) {}
 
   alerts!: Alert[];
 
@@ -51,6 +53,13 @@ export class DashboardComponent implements OnInit {
   totalAlerts!: TotalAlerts;
 
   ngOnInit() {
+    this.authService.user$.subscribe((user) => {
+      this.user = user;
+      if (!user) {
+        this.router.navigate(['/login']);
+      }
+    });
+
     this.loadData();
     this.countCasesPerWeek();
     this.prepareChartData();
@@ -234,5 +243,10 @@ export class DashboardComponent implements OnInit {
 
   redirectLink(link: string) {
     window.open(link);
+  }
+  
+  logout(): void {
+    this.authService.logout();
+    this.router.navigate(['/login']);
   }
 }
