@@ -5,11 +5,28 @@ import { ChartModule } from 'primeng/chart';
 import { MenuModule } from 'primeng/menu';
 import { CommonModule } from '@angular/common';
 import { TableModule } from 'primeng/table';
+import { Alert } from './model/alert.model';
+import { IconFieldModule } from 'primeng/iconfield';
+import { InputIconModule } from 'primeng/inputicon';
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
+import { TagModule } from 'primeng/tag';
+import data from './model/dummy.json';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [ChartModule, MenuModule, CommonModule, TableModule],
+  imports: [
+    ChartModule,
+    ButtonModule,
+    TagModule,
+    MenuModule,
+    CommonModule,
+    TableModule,
+    IconFieldModule,
+    InputIconModule,
+    InputTextModule,
+  ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css',
 })
@@ -20,6 +37,8 @@ export class DashboardComponent implements OnInit {
 
   items!: MenuItem[];
 
+  alerts: Alert[] = data;
+
   ngOnInit() {
     // this.initChart();
 
@@ -29,64 +48,41 @@ export class DashboardComponent implements OnInit {
     ];
   }
 
-  // initChart() {
-  //   const documentStyle = getComputedStyle(document.documentElement);
-  //   const textColor = documentStyle.getPropertyValue('--text-color');
-  //   const textColorSecondary = documentStyle.getPropertyValue(
-  //     '--text-color-secondary'
-  //   );
-  //   const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
+  redirectLink(link: string) {
+    console.log(link);
+  }
 
-  //   this.chartData = {
-  //     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-  //     datasets: [
-  //       {
-  //         label: 'First Dataset',
-  //         data: [65, 59, 80, 81, 56, 55, 40],
-  //         fill: false,
-  //         backgroundColor: documentStyle.getPropertyValue('--bluegray-700'),
-  //         borderColor: documentStyle.getPropertyValue('--bluegray-700'),
-  //         tension: 0.4,
-  //       },
-  //       {
-  //         label: 'Second Dataset',
-  //         data: [28, 48, 40, 19, 86, 27, 90],
-  //         fill: false,
-  //         backgroundColor: documentStyle.getPropertyValue('--green-600'),
-  //         borderColor: documentStyle.getPropertyValue('--green-600'),
-  //         tension: 0.4,
-  //       },
-  //     ],
-  //   };
+  getSeverity(status: string) {
+    if (!status) return undefined;
 
-  //   this.chartOptions = {
-  //     plugins: {
-  //       legend: {
-  //         labels: {
-  //           color: textColor,
-  //         },
-  //       },
-  //     },
-  //     scales: {
-  //       x: {
-  //         ticks: {
-  //           color: textColorSecondary,
-  //         },
-  //         grid: {
-  //           color: surfaceBorder,
-  //           drawBorder: false,
-  //         },
-  //       },
-  //       y: {
-  //         ticks: {
-  //           color: textColorSecondary,
-  //         },
-  //         grid: {
-  //           color: surfaceBorder,
-  //           drawBorder: false,
-  //         },
-  //       },
-  //     },
-  //   };
-  // }
+    switch (status.toLowerCase()) {
+      case 'red':
+        return 'danger';
+
+      case 'orange':
+        return 'warning';
+
+      case 'green':
+        return 'success';
+      default:
+        return undefined;
+    }
+  }
+
+  getValue(status: string){
+    if (!status) return undefined;
+
+    switch (status.toLowerCase()) {
+      case 'red':
+        return 'High';
+
+      case 'orange':
+        return 'Medium';
+
+      case 'green':
+        return 'Low';
+      default:
+        return undefined;
+    }
+  }
 }
