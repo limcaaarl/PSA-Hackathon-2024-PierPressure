@@ -1,99 +1,103 @@
 <div class="grid margin-nav ml-0 mx-6">
     <p-toast />
     <!-- Summary -->
-    <div class="col-12 lg:col-6 xl:col-3">
-        <div class="card mb-0" style="border-color: rgb(77, 208, 225); border-left-width: 4px; border-left-style: solid;">
-            <div class="flex justify-content-between">
-                <div>
-                    <span class="block text-500 text-base font-semibold mb-1">Last 24 hours</span>
-                    @if (this.totalAlerts.alertsLast24Hours > 0) {
-                    <div class="text-900 font-semibold text-5xl text-red-500 inline-block">
-                        {{this.totalAlerts.alertsLast24Hours}}
+        <div class="col-12 lg:col-6 xl:col-3">
+            <div class="card mb-0"
+                style="border-color: rgb(77, 208, 225); border-left-width: 4px; border-left-style: solid;">
+                <div class="flex justify-content-between">
+                    <div>
+                        <span class="block text-500 text-base font-semibold mb-1">Last 24 hours</span>
+                        @if (this.totalAlerts.alertsLast24Hours > 0) {
+                        <div class="text-900 font-semibold text-5xl text-red-500 inline-block">
+                            {{this.totalAlerts.alertsLast24Hours}}
+                        </div>
+                        } @else {
+                        <div class="text-900 font-semibold text-5xl text-green-500 inline-block">
+                            {{this.totalAlerts.alertsLast24Hours}}
+                        </div>
+                        }
+                        <div class="text-900 font-semibold text-5xl inline-block pl-2">
+                            alert(s)
+                        </div>
                     </div>
-                    } @else {
-                    <div class="text-900 font-semibold text-5xl text-green-500 inline-block">
-                        {{this.totalAlerts.alertsLast24Hours}}
-                    </div>
-                    }
-                    <div class="text-900 font-semibold text-5xl inline-block pl-2">
-                        alert(s)
-                    </div>
-                </div>
-                <i class="pi pi-chart-line text-500 text-base text-3xl"></i>
-                <!-- <div class="flex align-items-center justify-content-center bg-green-300 border-round"
+                    <i class="pi pi-chart-line text-500 text-base text-3xl"></i>
+                    <!-- <div class="flex align-items-center justify-content-center bg-green-300 border-round"
                     [ngStyle]="{width: '2.5rem', height: '2.5rem'}">
                     <i class="pi pi-shopping-cart text-blue-500 text-xl"></i>
                 </div> -->
-            </div>
-        </div>
-    </div>
-    <div class="col-12 lg:col-6 xl:col-3">
-        <div class="card mb-0" style="border-color: rgb(77, 208, 225); border-left-width: 4px; border-left-style: solid;">
-            <div class="flex justify-content-between">
-                <div>
-                    <span class="block text-500 text-base font-semibold mb-1">Last 1 week</span>
-                    @if (this.totalAlerts.alertsLastWeek > 0) {
-                    <div class="text-900 font-semibold text-5xl text-red-500 inline-block">
-                        {{this.totalAlerts.alertsLastWeek}}
-                    </div>
-                    } @else {
-                    <div class="text-900 font-semibold text-5xl text-green-500 inline-block">
-                        {{this.totalAlerts.alertsLastWeek}}
-                    </div>
-                    }
-                    <div class="text-900 font-semibold text-5xl inline-block pl-2">
-                        alert(s)
-                    </div>
                 </div>
-                <i class="pi pi-chart-line text-3xl text-500 text-base"></i>
             </div>
         </div>
-    </div>
-    <div class="col-12 lg:col-6 xl:col-3">
-        <div class="card mb-0" style="border-color: rgb(77, 208, 225); border-left-width: 4px; border-left-style: solid;">
-            <div class="flex justify-content-between">
-                <div>
-                    <span class="block text-500 text-base font-semibold mb-1">Last 1 month</span>
-                    @if (this.totalAlerts.alertsLastMonth > 0) {
-                    <div class="text-900 font-semibold text-5xl text-red-500 inline-block">
-                        {{this.totalAlerts.alertsLastMonth}}
+        <div class="col-12 lg:col-6 xl:col-3">
+            <div class="card mb-0"
+                style="border-color: rgb(77, 208, 225); border-left-width: 4px; border-left-style: solid;">
+                <div class="flex justify-content-between">
+                    <div>
+                        <span class="block text-500 text-base font-semibold mb-1">Last 1 week</span>
+                        @if (this.totalAlerts.alertsLastWeek > 0) {
+                        <div class="text-900 font-semibold text-5xl text-red-500 inline-block">
+                            {{this.totalAlerts.alertsLastWeek}}
+                        </div>
+                        } @else {
+                        <div class="text-900 font-semibold text-5xl text-green-500 inline-block">
+                            {{this.totalAlerts.alertsLastWeek}}
+                        </div>
+                        }
+                        <div class="text-900 font-semibold text-5xl inline-block pl-2">
+                            alert(s)
+                        </div>
                     </div>
-                    } @else {
-                    <div class="text-900 font-semibold text-5xl text-green-500 inline-block">
-                        {{this.totalAlerts.alertsLastMonth}}
-                    </div>
-                    }
-                    <div class="text-900 font-semibold text-5xl inline-block pl-2">
-                        alert(s)
-                    </div>
+                    <i class="pi pi-chart-line text-3xl text-500 text-base"></i>
                 </div>
-                <i class="pi pi-chart-line text-3xl text-500 text-base"></i>
             </div>
         </div>
-    </div>
-    <div class="col-12 lg:col-6 xl:col-3">
-        <div class="card mb-0" style="border-color: rgb(77, 208, 225); border-left-width: 4px; border-left-style: solid;">
-            <div class="flex justify-content-between">
-                <div>
-                    <span class="block text-500 text-base font-semibold mb-1">Total</span>
-                    <div class="text-900 font-semibold text-5xl text-red-500 inline-block">
-                        {{this.totalAlerts.totalAlerts}}
+        <div class="col-12 lg:col-6 xl:col-3">
+            <div class="card mb-0"
+                style="border-color: rgb(77, 208, 225); border-left-width: 4px; border-left-style: solid;">
+                <div class="flex justify-content-between">
+                    <div>
+                        <span class="block text-500 text-base font-semibold mb-1">Last 1 month</span>
+                        @if (this.totalAlerts.alertsLastMonth > 0) {
+                        <div class="text-900 font-semibold text-5xl text-red-500 inline-block">
+                            {{this.totalAlerts.alertsLastMonth}}
+                        </div>
+                        } @else {
+                        <div class="text-900 font-semibold text-5xl text-green-500 inline-block">
+                            {{this.totalAlerts.alertsLastMonth}}
+                        </div>
+                        }
+                        <div class="text-900 font-semibold text-5xl inline-block pl-2">
+                            alert(s)
+                        </div>
                     </div>
-                    <div class="text-900 font-semibold text-5xl inline-block pl-2">
-                        alert(s)
-                    </div>
+                    <i class="pi pi-chart-line text-3xl text-500 text-base"></i>
                 </div>
-                <i class="pi pi-chart-line text-3xl text-500 text-base"></i>
             </div>
         </div>
-    </div>
+        <div class="col-12 lg:col-6 xl:col-3">
+            <div class="card mb-0"
+                style="border-color: rgb(77, 208, 225); border-left-width: 4px; border-left-style: solid;">
+                <div class="flex justify-content-between">
+                    <div>
+                        <span class="block text-500 text-base font-semibold mb-1">Total</span>
+                        <div class="text-900 font-semibold text-5xl text-red-500 inline-block">
+                            {{this.totalAlerts.totalAlerts}}
+                        </div>
+                        <div class="text-900 font-semibold text-5xl inline-block pl-2">
+                            alert(s)
+                        </div>
+                    </div>
+                    <i class="pi pi-chart-line text-3xl text-500 text-base"></i>
+                </div>
+            </div>
+        </div>
     <!-- End of Summary -->
 
     <!-- Table -->
     <div class="col-12 xl:col-6">
         <div class="card mb-0 h-full">
-            <p-table #dt [value]="alerts" dataKey="id" [paginator]="true" [rows]="6"
-                [globalFilterFields]="['content']" sortField="timestamp" [sortOrder]="-1">
+            <p-table #dt [value]="alerts" dataKey="id" [paginator]="true" [rows]="6" [globalFilterFields]="['content']"
+                sortField="timestamp" [sortOrder]="-1">
                 <ng-template pTemplate="header">
                     <tr>
                         <th style="width:60%">
@@ -102,10 +106,10 @@
                         <th pSortableColumn="timestamp" style="width:20%">
                             Timestamp <p-sortIcon field="timestamp" />
                         </th>
-                        <!-- <th pSortableColumn="severity" style="width:10%">
-                            Severity <p-sortIcon field="severity" />
-                        </th> -->
-                        <th style="width:10%">
+                        <th pSortableColumn="location" style="width:15%">
+                            Location <p-sortIcon field="location" />
+                        </th>
+                        <th style="width:5%">
 
                         </th>
                     </tr>
@@ -120,10 +124,10 @@
                             <span class="p-column-title">TimeStamp</span>
                             <span class="ml-1 vertical-align-middle">{{ alert.timestamp }}</span>
                         </td>
-                        <!-- <td>
-                            <span class="p-column-title">Status</span>
-                            <p-tag [value]="getValue(alert.severity)" [severity]="getSeverity(alert.severity)" />
-                        </td> -->
+                        <td>
+                            <span class="p-column-title">Location</span>
+                            {{ alert.location }}
+                        </td>
                         <td>
                             <p-button label="Link" severity="primary" icon="pi pi-external-link" class="mr-2"
                                 [text]="true" (onClick)="redirectLink(alert.link)" />
