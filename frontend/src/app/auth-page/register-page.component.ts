@@ -5,17 +5,17 @@ import { Router } from '@angular/router';
 import { NgIf } from "@angular/common";
 
 @Component({
-  selector: 'app-auth-page',
+  selector: 'app-register-page',
   standalone: true,
   imports: [
     ReactiveFormsModule,
     FormsModule,
     NgIf
   ],
-  templateUrl: './auth-page.component.html',
+  templateUrl: './register-page.component.html',
   styleUrls: ['./auth-page.component.css']
 })
-export class AuthPageComponent {
+export class RegisterPageComponent {
   email: string = '';
   password: string = '';
   errorMessage: string | null = null;
@@ -32,15 +32,15 @@ export class AuthPageComponent {
 
   onSubmit(): void {
     if (this.email && this.password) {
-      this.authService.login(this.email, this.password).subscribe({
+      this.authService.register(this.email, this.password).subscribe({
         next: () => {
-          console.log('Login successful');
+          console.log('Registration successful');
           this.errorMessage = null;
           this.router.navigate(['/home']);
         },
         error: (error) => {
-          console.error('Login error:', error);
-          this.errorMessage = 'Login failed. Please check your credentials.';
+          console.error('Registration error:', error);
+          this.errorMessage = 'Registration failed. Please try again.';
         }
       });
     } else {
@@ -48,7 +48,7 @@ export class AuthPageComponent {
     }
   }
 
-  goToRegister(): void {
-    this.router.navigate(['/register']);
+  goToLogin(): void {
+    this.router.navigate(['/login']);
   }
 }
