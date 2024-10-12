@@ -1,6 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, inject, AfterViewInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { ChartModule } from 'primeng/chart';
 import { MenuModule } from 'primeng/menu';
 import { CommonModule } from '@angular/common';
@@ -16,6 +16,7 @@ import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import { Firestore, collection, collectionData} from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-dashboard',
@@ -38,7 +39,7 @@ import { Router } from '@angular/router';
   styleUrl: './dashboard.component.css',
 })
 export class DashboardComponent implements OnInit {
-  constructor(private authService: AuthService, private router: Router, private messageService: MessageService) {}
+  private firestore: Firestore = inject(Firestore); 
 
   chartData: any;
 
@@ -52,10 +53,17 @@ export class DashboardComponent implements OnInit {
 
   alerts!: Alert[];
 
+  observableAlerts!: Observable<Alert[]>;
+
   weeklyCases: { [weekNumber: string]: number } = {};
 
   totalAlerts!: TotalAlerts;
 
+  constructor(private authService: AuthService, private router: Router, private messageService: MessageService) {
+    const alertCollection = collection(this.firestore, 'alerts');
+
+    this.observableAlerts = collectionData(alertCollection) as Observable<Alert[]>;
+  }
   ngOnInit() {
     this.authService.user$.subscribe((user) => {
       this.user = user;
@@ -65,10 +73,6 @@ export class DashboardComponent implements OnInit {
     });
 
     this.loadData();
-    this.countCasesPerWeek();
-    this.prepareChartData();
-    this.countAlertsByTimeRange();
-    this.initChart();
   }
 
   showToast() {
@@ -80,8 +84,15 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  loadData() {
-    this.alerts = data;
+  async loadData() {
+    // this.alerts = data;
+    this.observableAlerts.subscribe(data => {
+      this.alerts = data;
+      this.countCasesPerWeek();
+      this.prepareChartData();
+      this.countAlertsByTimeRange();
+      this.initChart();
+    });
   }
 
   getWeekNumber(date: Date): number {
