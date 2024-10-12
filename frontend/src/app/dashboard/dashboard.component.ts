@@ -38,13 +38,17 @@ import { Router } from '@angular/router';
   styleUrl: './dashboard.component.css',
 })
 export class DashboardComponent implements OnInit {
+  constructor(private authService: AuthService, private router: Router, private messageService: MessageService) {}
 
   chartData: any;
+
   chartOptions: any;
+
   items!: MenuItem[];
+
   user: any = null;
 
-  constructor(private authService: AuthService, private router: Router, private messageService: MessageService) {}
+  loading: boolean = true;
 
   alerts!: Alert[];
 
@@ -243,10 +247,5 @@ export class DashboardComponent implements OnInit {
 
   redirectLink(link: string) {
     window.open(link);
-  }
-  
-  logout(): void {
-    this.authService.logout();
-    this.router.navigate(['/login']);
   }
 }
