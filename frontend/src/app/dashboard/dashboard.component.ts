@@ -12,6 +12,8 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { TagModule } from 'primeng/tag';
 import data from './model/dummy.json';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-dashboard',
@@ -26,11 +28,16 @@ import data from './model/dummy.json';
     IconFieldModule,
     InputIconModule,
     InputTextModule,
+    ToastModule,
   ],
+  providers: [MessageService],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css',
 })
 export class DashboardComponent implements OnInit {
+
+  constructor(private messageService: MessageService) {}
+
   chartData: any;
 
   chartOptions: any;
@@ -49,6 +56,15 @@ export class DashboardComponent implements OnInit {
     this.prepareChartData();
     this.countAlertsByTimeRange();
     this.initChart();
+  }
+
+  showToast() {
+    this.messageService.add({
+      severity: 'error',
+      summary: 'New alert!',
+      detail: 'A new tweet points to a possible hostile event. Exercise caution.',
+      sticky: true  // Sticky toast will not have a timeout
+    });
   }
 
   loadData() {
@@ -88,45 +104,49 @@ export class DashboardComponent implements OnInit {
 
   countAlertsByTimeRange() {
     const currentDate = new Date();
-    const oneDayAgo = new Date(currentDate.getTime() - 24 * 60 * 60 * 1000);  // 24 hours ago
-    const oneWeekAgo = new Date(currentDate.getTime() - 7 * 24 * 60 * 60 * 1000);  // 7 days ago
-    const oneMonthAgo = new Date(currentDate.getTime() - 30 * 24 * 60 * 60 * 1000);  // 1 month ago
-  
+    const oneDayAgo = new Date(currentDate.getTime() - 24 * 60 * 60 * 1000); // 24 hours ago
+    const oneWeekAgo = new Date(
+      currentDate.getTime() - 7 * 24 * 60 * 60 * 1000
+    ); // 7 days ago
+    const oneMonthAgo = new Date(
+      currentDate.getTime() - 30 * 24 * 60 * 60 * 1000
+    ); // 1 month ago
+
     let alertsLast24Hours = 0;
     let alertsLastWeek = 0;
     let alertsLastMonth = 0;
     let totalAlerts = 0;
-  
-    this.alerts.forEach(alert => {
+
+    this.alerts.forEach((alert) => {
       const alertDate = new Date(alert.timestamp);
-  
-      totalAlerts++;  // Count total alerts
-  
+
+      totalAlerts++; // Count total alerts
+
       if (alertDate >= oneDayAgo) {
         alertsLast24Hours++;
       }
-  
+
       if (alertDate >= oneWeekAgo) {
         alertsLastWeek++;
       }
-  
+
       if (alertDate >= oneMonthAgo) {
         alertsLastMonth++;
       }
     });
-  
+
     this.totalAlerts = {
       alertsLast24Hours,
       alertsLastWeek,
       alertsLastMonth,
-      totalAlerts
-    }
+      totalAlerts,
+    };
   }
 
   prepareChartData() {
     const weeks = Object.keys(this.weeklyCases);
     const caseData = weeks.map((week) => this.weeklyCases[week]);
-  
+
     let documentStyle;
     // Ensure getComputedStyle is only called in browser context
     if (typeof window !== 'undefined') {
@@ -137,10 +157,10 @@ export class DashboardComponent implements OnInit {
         getPropertyValue: (property: string) => {
           // Return default values or placeholders
           return '#000'; // fallback color
-        }
+        },
       };
     }
-  
+
     // Prepare the chart data structure
     this.chartData = {
       labels: weeks,
@@ -157,7 +177,7 @@ export class DashboardComponent implements OnInit {
       ],
     };
   }
-  
+
   initChart() {
     let documentStyle;
     // Ensure getComputedStyle is only called in browser context
@@ -169,16 +189,16 @@ export class DashboardComponent implements OnInit {
         getPropertyValue: (property: string) => {
           // Return default values or placeholders
           return '#000'; // fallback color
-        }
+        },
       };
     }
-  
+
     const textColor = documentStyle.getPropertyValue('--text-color');
     const textColorSecondary = documentStyle.getPropertyValue(
       '--text-color-secondary'
     );
     const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
-  
+
     this.chartOptions = {
       maintainAspectRatio: false,
       aspectRatio: 0.6,
@@ -211,43 +231,8 @@ export class DashboardComponent implements OnInit {
       },
     };
   }
-  
 
   redirectLink(link: string) {
-    console.log(link);
+    window.open(link);
   }
-
-  // getSeverity(status: string) {
-  //   if (!status) return undefined;
-
-  //   switch (status.toLowerCase()) {
-  //     case 'red':
-  //       return 'danger';
-
-  //     case 'orange':
-  //       return 'warning';
-
-  //     case 'green':
-  //       return 'success';
-  //     default:
-  //       return undefined;
-  //   }
-  // }
-
-  // getValue(status: string) {
-  //   if (!status) return undefined;
-
-  //   switch (status.toLowerCase()) {
-  //     case 'red':
-  //       return 'High';
-
-  //     case 'orange':
-  //       return 'Medium';
-
-  //     case 'green':
-  //       return 'Low';
-  //     default:
-  //       return undefined;
-  //   }
-  // }
 }
