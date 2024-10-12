@@ -44,8 +44,8 @@ threats (such as terrorist activities or other disturbances) before they happen,
 ### Technology Stack
 
 - **Backend**: Python, Flask
-- **Web Scraper**:
-- **Language Model**:
+- **Web Scraper**: Snscrape
+- **Language Model**: LLama 3
 - **Database**: Firebase Firestore
 - **Dashboard**: HTML, CSS, JavaScript, Angular
 
