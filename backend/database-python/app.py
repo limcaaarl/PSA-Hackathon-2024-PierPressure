@@ -1,4 +1,3 @@
-from firebase_admin import firestore
 from firebase_config import send_data_to_firestore
 
 
