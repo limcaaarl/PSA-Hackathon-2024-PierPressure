@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  frontend:
+    container_name: frontend
+    image: frontend
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    ports:
+      - 4200:4200
+    volumes:
+      - /app/node_modules
+      - ./frontend:/app
+
+  database-python:
+    build:
+      context: ./backend/database-python
+      dockerfile: Dockerfile
+    container_name: database-python-container
+    volumes:
+      - ./backend/database-python:/app
+    environment:
+      - PYTHON UNBUFFERED=1
+    command: python app.py
+
+  scripting:
+    build:
+      context: ./backend/scripting
+      dockerfile: Dockerfile
+    container_name: scripting-container
+    volumes:
+      - ./backend/scripting:/app
+    environment:
+      - PYTHON UNBUFFERED=1
+    command: /bin/sh -c "cron && tail -f /dev/null"
