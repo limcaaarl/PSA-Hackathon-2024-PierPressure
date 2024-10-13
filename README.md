@@ -44,10 +44,73 @@ threats (such as terrorist activities or other disturbances) before they happen,
 ### Technology Stack
 
 - **Backend**: Python, Flask
-- **Web Scraper**: Snscrape
+- **Web Scraper**: 
 - **Language Model**: LLama 3
-- **Database**: Firebase Firestore
+- **Database**: Firebase, Firestore
 - **Dashboard**: HTML, CSS, JavaScript, Angular
+
+---
+
+### Get Started Guide
+
+#### Step 1: Clone the repository
+
+```bash
+git clone https://github.com/limcaaarl/PierPressure.git
+```
+
+#### Step 2: Set up Firebase Configuration for Backend
+
+- Go to `root/backend/scripting/`.
+- Create a file named `serviceAccountKey.json`.
+- This file should contain your Firebase credentials in the following format:
+```json
+{
+  "type": "service_account",
+  "project_id": "your_project_id",
+  "private_key_id": "your_private_key_id",
+  "private_key": "your_private_key",
+  "client_email": "your_client_email",
+  "client_id": "your_client_id",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/your_project_id"
+}
+```
+#### Step 3: Set up Firebase Configuration for Frontend
+
+- Go to `root/frontend/src/app/`.
+- Create a file named `firebase.config.ts`.
+- This file should contain your Firebase credentials in the following format:
+```typescript
+export const firebaseConfig = {
+  apiKey: "your_api_key",
+  authDomain: "your_auth_domain",
+  projectId: "your_project_id",
+  storageBucket: "your_storage_bucket",
+  messagingSenderId: "your_messaging_sender_id",
+  appId: "your_app_id"
+};
+```
+
+#### Step 4: Build the Docker containers
+```bash
+docker compose build
+```
+
+#### Step 5: Run the Docker containers
+```bash
+docker compose up -d
+```
+
+#### Step 6: Access the dashboard
+- Open your browser and go to `http://localhost:4200/`. You will be directed to the login page. Sign up using an email and password to view the dashboard.
+
+#### Step 7: Stop the containers
+```bash
+docker compose down -v
+```
 
 ---
 
