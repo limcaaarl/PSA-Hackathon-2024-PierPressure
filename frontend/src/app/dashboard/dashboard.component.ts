@@ -17,6 +17,7 @@ import { MessageService } from 'primeng/api';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { Firestore, collection, collectionData} from '@angular/fire/firestore';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
@@ -34,7 +35,7 @@ import { Firestore, collection, collectionData} from '@angular/fire/firestore';
     ToastModule,
     CommonModule, ChartModule, MenuModule, TableModule
   ],
-  providers: [MessageService],
+  providers: [MessageService, DatePipe],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css',
 })
@@ -59,7 +60,7 @@ export class DashboardComponent implements OnInit {
 
   totalAlerts!: TotalAlerts;
 
-  constructor(private authService: AuthService, private router: Router, private messageService: MessageService) {
+  constructor(private datePipe: DatePipe, private authService: AuthService, private router: Router, private messageService: MessageService) {
     const alertCollection = collection(this.firestore, 'alerts');
 
     this.observableAlerts = collectionData(alertCollection) as Observable<Alert[]>;
@@ -93,6 +94,12 @@ export class DashboardComponent implements OnInit {
       this.countAlertsByTimeRange();
       this.initChart();
     });
+  }
+  
+  formatTimestamp(inTimestamp: string) {
+    const timestamp = inTimestamp;
+    const formattedDate = this.datePipe.transform(timestamp, 'yyyy-MM-dd, h:mm a');
+    return formattedDate;
   }
 
   getWeekNumber(date: Date): number {

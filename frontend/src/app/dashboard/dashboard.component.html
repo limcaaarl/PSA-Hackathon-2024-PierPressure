@@ -101,15 +101,15 @@
                 sortField="timestamp" [sortOrder]="-1">
                 <ng-template pTemplate="header">
                     <tr>
-                        <th style="width:60%">
+                        <th style="width:75%">
                             Content
                         </th>
                         <th pSortableColumn="timestamp" style="width:20%">
                             Timestamp <p-sortIcon field="timestamp" />
                         </th>
-                        <th pSortableColumn="location" style="width:15%">
+                        <!-- <th pSortableColumn="location" style="width:15%">
                             Location <p-sortIcon field="location" />
-                        </th>
+                        </th> -->
                         <th style="width:5%">
 
                         </th>
@@ -123,12 +123,12 @@
                         </td>
                         <td>
                             <span class="p-column-title">TimeStamp</span>
-                            <span class="ml-1 vertical-align-middle">{{ alert.timestamp }}</span>
+                            <span class="ml-1 vertical-align-middle">{{ this.formatTimestamp(alert.timestamp) }}</span>
                         </td>
-                        <td>
+                        <!-- <td>
                             <span class="p-column-title">Location</span>
                             {{ alert.location }}
-                        </td>
+                        </td> -->
                         <td>
                             <p-button label="Link" severity="primary" icon="pi pi-external-link" class="mr-2"
                                 [text]="true" (onClick)="redirectLink(alert.link)" />
