@@ -20,7 +20,6 @@ services:
     container_name: scripting-container
     volumes:
       - ./backend/scripting:/app
-      - ./backend/database_python:/app/database_python
     environment:
       - PYTHON UNBUFFERED=1
     command: /bin/sh -c "cron && tail -f /dev/null"
