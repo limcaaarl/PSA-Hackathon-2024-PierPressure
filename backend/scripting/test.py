@@ -5,6 +5,8 @@ from firebase_config import send_data_to_firestore
 
 log_file_path = '/app/logfile.log' if os.getenv('DOCKER_ENV') == 'true' else 'logfile.log'
 
+
+# Simulate a task (to be replaced with scraper_llm.py, but contains code to submit to firebase)
 def simulate_task():
     data = {
         "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -20,6 +22,7 @@ def simulate_task():
         logging.info(f"Data sent successfully at {data['timestamp']}")
     except Exception as e:
         logging.error(f"Error occurred: {e}")
+
 
 if __name__ == "__main__":
     simulate_task()
