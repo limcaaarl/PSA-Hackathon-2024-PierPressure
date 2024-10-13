@@ -13,17 +13,6 @@ services:
       - /app/node_modules
       - ./frontend:/app
 
-  database-python:
-    build:
-      context: ./backend/database-python
-      dockerfile: Dockerfile
-    container_name: database-python-container
-    volumes:
-      - ./backend/database-python:/app
-    environment:
-      - PYTHON UNBUFFERED=1
-    command: python app.py
-
   scripting:
     build:
       context: ./backend/scripting
@@ -31,6 +20,7 @@ services:
     container_name: scripting-container
     volumes:
       - ./backend/scripting:/app
+      - ./backend/database_python:/app/database_python
     environment:
       - PYTHON UNBUFFERED=1
     command: /bin/sh -c "cron && tail -f /dev/null"
