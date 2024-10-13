@@ -1,6 +1,7 @@
 snscrape
 transformers
 torch
+firebase-admin
 Flask==2.1.1
 Flask-CORS==3.0.10
 google-cloud-firestore==2.4.0

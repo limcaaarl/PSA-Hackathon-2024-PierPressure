@@ -1,22 +1,20 @@
 FROM python:3.9-slim
 
 WORKDIR /app
-
-# Copy your files into the Docker container
 COPY . /app
 
-# Install the required dependencies
 RUN pip install --no-cache-dir -r requirement.txt
 
-# Install cron in the container
 RUN apt-get update && apt-get install -y cron
+
+RUN which python3
 
 # Copy the serviceAccountKey.json from your host to the container
 # (ensure this is excluded from version control)
-COPY /path/to/serviceAccountKey.json /app/serviceAccountKey.json
+COPY serviceAccountKey.json /app/serviceAccountKey.json
 
-# Make time.sh executable
-RUN chmod +x /app/time.sh
+# Add the cron job directly during build - need to change it to every 15 minutes
+RUN echo "*/1 * * * * /usr/local/bin/python3 /app/test.py >> /app/output.json 2>> /app/logfile.log" | crontab -
 
-# Start time.sh which contains the cron setup
-CMD ["/app/time.sh"]
+# Start the cron service in foreground mode
+CMD ["cron", "-f"]
