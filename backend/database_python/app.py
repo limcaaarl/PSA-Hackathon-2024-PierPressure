@@ -1,3 +1,6 @@
+# Run this to test whether the firebase connection works
+# python app.py
+
 from firebase_config import send_data_to_firestore
 
 
