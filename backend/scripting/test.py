@@ -1,9 +1,9 @@
 import logging
+import os
 from datetime import datetime
 from firebase_config import send_data_to_firestore
 
-logging.basicConfig(filename='logfile.log', level=logging.INFO)
-
+log_file_path = '/app/logfile.log' if os.getenv('DOCKER_ENV') == 'true' else 'logfile.log'
 
 def simulate_task():
     data = {
@@ -15,12 +15,11 @@ def simulate_task():
     }
 
     try:
-        # Send data to Firebase Firestore
+        # Send the data to Firestore
         send_data_to_firestore(data)
         logging.info(f"Data sent successfully at {data['timestamp']}")
     except Exception as e:
         logging.error(f"Error occurred: {e}")
-
 
 if __name__ == "__main__":
     simulate_task()
