@@ -1,8 +1,8 @@
-# Pier Pressure - Early Threat Warning System
+# PierPressure - Early Threat Warning System
 
-*PSA Hackathon: Code Sprint*
+_PSA Hackathon: Code Sprint 2024_
 
-## Team Name: Pier Pressure
+## Team Name: PierPressure
 
 **Theme 1: Resilient Port Operations Globally**
 
@@ -17,12 +17,14 @@ AI-driven solutions to optimize port resilience and efficiency across the global
 The objective of this project is to develop an **Early Threat Warning System** that identifies potential sea-based
 threats (such as terrorist activities or other disturbances) before they happen, enabling preemptive actions.
 
+![Screenshot](./dashboard.jpg)
+
 ---
 
 ### Key Features
 
 | Feature                                 | Description                                                                                                                       |
-|-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | **Automated Web Scraper**               | Collects real-time data on sea and terrorist threats through social media platforms.                                              |
 | **Training Large Language Model (LLM)** | Uses an LLM to analyze incoming data from the web scraper and detect patterns that could signify potential threats.               |
 | **Sentiment Analysis of Live Tweets**   | Evaluates public sentiment in real-time to help identify possible threats through social media platforms.                         |
@@ -43,80 +45,63 @@ threats (such as terrorist activities or other disturbances) before they happen,
 
 ### Technology Stack
 
-- **Backend**: Python, Flask
-- **Web Scraper**: 
+- **Web Scraper**: Selenium
 - **Language Model**: LLama 3
-- **Database**: Firebase, Firestore
-- **Dashboard**: HTML, CSS, JavaScript, Angular
+- **Database**: Firestore Database
+- **Dashboard**: HTML, CSS, TypeScript, Angular
 
 ---
 
 ### Get Started Guide
 
-#### Step 1: Clone the repository
+#### Step 1: Pre-requisites
+
+- Ensure your system has docker installed.
+- All command lines will be ran in the root directory of this project folder, more specifically, the folder where docker-compose.yml file can be found.
+
+#### Step 2: Build the Docker containers
 
 ```bash
-git clone https://github.com/limcaaarl/PierPressure.git
+docker compose build --no-cache
 ```
 
-#### Step 2: Set up Firebase Configuration for Backend
+#### Step 3: Run the Docker containers
 
-- Go to `root/backend/scripting/`.
-- Create a file named `serviceAccountKey.json`.
-- This file should contain your Firebase credentials in the following format:
-```json
-{
-  "type": "service_account",
-  "project_id": "your_project_id",
-  "private_key_id": "your_private_key_id",
-  "private_key": "your_private_key",
-  "client_email": "your_client_email",
-  "client_id": "your_client_id",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/your_project_id"
-}
-```
-#### Step 3: Set up Firebase Configuration for Frontend
-
-- Go to `root/frontend/src/app/`.
-- Create a file named `firebase.config.ts`.
-- This file should contain your Firebase credentials in the following format:
-```typescript
-export const firebaseConfig = {
-  apiKey: "your_api_key",
-  authDomain: "your_auth_domain",
-  projectId: "your_project_id",
-  storageBucket: "your_storage_bucket",
-  messagingSenderId: "your_messaging_sender_id",
-  appId: "your_app_id"
-};
-```
-
-#### Step 4: Build the Docker containers
-```bash
-docker compose build
-```
-
-#### Step 5: Run the Docker containers
 ```bash
 docker compose up -d
 ```
 
-#### Step 6: Access the dashboard
+> Note: This process might take a few minutes, depending on internet connection speed, as the the container needs to install the libraries required.
+
+#### Step 4: Access the dashboard
+
 - Open your browser and go to `http://localhost:4200/`. You will be directed to the login page. Sign up using an email and password to view the dashboard.
 
-#### Step 7: Stop the containers
+#### Step 5: Stop the containers
+
+Once done with the testing, feel free to stop the container.
+
 ```bash
 docker compose down -v
 ```
 
----
+### Others
+
+| Folder / File                                                         | Description                                                                         |
+| --------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **./LLM Model and Scripts/Llama3_tweet_classification.ipynb**         | Uses fine-tuned Llama 3 model to classify clean content (tweets).                   |
+| **./LLM Model and Scripts/Llama3_finetuning/Llama3_finetuning.ipynb** | Model after fine-tuning.                                                            |
+| **./LLM Model and Scripts/all predictions**                           | A folder containing all excel file for all predictions(both positive and negative). |
+| **./LLM Model and Scripts/positive predictions**                      | A folder containing all excel file for all positive predictions.                    |
+| **./LLM Model and Scripts/cleaned tweets**                            | A folder containing all excel files of scraped tweets after cleaning.               |
+| **./LLM Model and Scripts/tweets**                                    | A folder containing all excel files of scraped tweets.                              |
+| **./LLM Model and Scripts/app.py**                                    | A script for writing into Firestore Database.                                       |
+| **./LLM Model and Scripts/Twitter_scraper.ipynb**                     | Used for scraping tweets based on keywords.                                         |
+| **./frontend**                                                        | A folder containing all the files related to the web application.                   |
 
 ### Team
 
-- **Team Name**: Pier Pressure
+- **Team Name**: PierPressure
 - **Members**: Carl, Hari, Nigel, Khoon Sun
 
 ---

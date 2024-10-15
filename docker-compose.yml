@@ -12,14 +12,3 @@ services:
     volumes:
       - /app/node_modules
       - ./frontend:/app
-
-  scripting:
-    build:
-      context: ./backend/scripting
-      dockerfile: Dockerfile
-    container_name: scripting-container
-    volumes:
-      - ./backend/scripting:/app
-    environment:
-      - PYTHON UNBUFFERED=1
-    command: /bin/sh -c "cron && tail -f /dev/null"
